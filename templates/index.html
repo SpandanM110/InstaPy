@@ -1,0 +1,12 @@
+<!-- templates/index.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Welcome to InstaPy</h1>
+    {% if current_user %}
+        <p>Hello, {{ current_user.username }}! Welcome back.</p>
+    {% else %}
+        <p>Please <a href="/login">login</a> or <a href="/register">register</a> to continue.</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,37 @@
+<!-- templates/base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InstaPy</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            {% if current_user %}
+                <a href="/feed">Feed</a>
+                <a href="/create_post">Create Post</a>
+                <a href="/profile/">Profile</a>
+                <a href="/logout">Logout</a>
+            {% else %}
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+            {% endif %}
+            <a href="/search_users">Search Users</a>
+            <a href="/search_posts">Search Posts</a>
+        </nav>
+    </header>
+    <main>
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 InstaPy</p>
+    </footer>
+</body>
+</html>

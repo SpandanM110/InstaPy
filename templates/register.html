@@ -1,0 +1,22 @@
+<!-- templates/register.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Register</h2>
+    <form method="post" action="/register">
+        <label for="username">Username:</label>
+        <input type="text" name="username" required minlength="3" maxlength="30"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required minlength="6"><br>
+
+        <button type="submit">Register</button>
+    </form>
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+{% endblock %}

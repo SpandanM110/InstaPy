@@ -1,0 +1,50 @@
+<!-- templates/search_posts.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Search Posts by Hashtag</h2>
+    <form method="get" action="/search_posts">
+        <input type="text" name="hashtag" placeholder="Enter hashtag (without #)" value="{{ hashtag if hashtag else '' }}" required><br>
+        <input type="text" name="category" placeholder="Filter by category" value="{{ category if category else '' }}"><br>
+        <label for="start_date">Start Date:</label>
+        <input type="date" name="start_date" value="{{ start_date }}"><br>
+        <label for="end_date">End Date:</label>
+        <input type="date" name="end_date" value="{{ end_date }}"><br>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if posts is not none %}
+        {% if posts %}
+            <ul>
+                {% for post in posts %}
+                    <li>
+                        <h3>{{ post.username }}</h3>
+                        <img src="{{ post.image_url }}" alt="Post Image" style="max-width: 300px;">
+                        <p>{{ post.caption }}</p>
+                        <p>Category: {{ post.category }}</p>
+                        <p>Hashtags: 
+                            {% for tag in post.hashtags %}
+                                #{{ tag }}
+                            {% endfor %}
+                        </p>
+                        <p>Likes: {{ post.likes_count }}</p>
+                        <p>Comments: {{ post.comments_count }}</p>
+                        <a href="/posts/{{ post.id }}">View Details</a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <div class="pagination">
+                {% if has_prev %}
+                    <a href="?hashtag={{ hashtag }}&category={{ category }}&start_date={{ start_date }}&end_date={{ end_date }}&skip={{ skip - limit }}&limit={{ limit }}">Previous</a>
+                {% endif %}
+                {% if has_next %}
+                    <a href="?hashtag={{ hashtag }}&category={{ category }}&start_date={{ start_date }}&end_date={{ end_date }}&skip={{ skip + limit }}&limit={{ limit }}">Next</a>
+                {% endif %}
+            </div>
+        {% else %}
+            <p>No posts found with hashtag "{{ hashtag }}".</p>
+        {% endif %}
+    {% endif %}
+{% endblock %}

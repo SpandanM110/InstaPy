@@ -1,0 +1,23 @@
+<!-- templates/post_comments.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Comments for Post: {{ post.caption }}</h2>
+    <ul>
+        {% for comment in comments %}
+            <li>
+                <strong>{{ comment.username }}</strong> ({{ comment.created_at.strftime("%Y-%m-%d %H:%M") }}): {{ comment.text }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <div class="pagination">
+        {% if has_prev %}
+            <a href="?skip={{ skip - limit }}&limit={{ limit }}">Previous</a>
+        {% endif %}
+        {% if has_next %}
+            <a href="?skip={{ skip + limit }}&limit={{ limit }}">Next</a>
+        {% endif %}
+    </div>
+{% endblock %}
