@@ -14,7 +14,6 @@ Welcome to **InstaPy**, a feature-rich, Instagram-like web application built wit
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 - [Contributing](#contributing)
-- [License](#license)
 - [Acknowledgements](#acknowledgements)
 
 ## Features
@@ -425,9 +424,7 @@ Contributions are welcome! If you'd like to contribute to InstaPy, please follow
 
    Navigate to your forked repository on GitHub and click the "New pull request" button.
 
-## License
 
-This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
