@@ -1,14 +1,5 @@
 # InstaPy
 
-![image](https://github.com/user-attachments/assets/eebcfa0e-eb46-44c0-a2be-2b5a02f94d0d)
-
-![Screenshot 2024-12-28 175149](https://github.com/user-attachments/assets/d876aeb5-6414-4fff-ba8b-b5e68ca82855)
-
-![image](https://github.com/user-attachments/assets/adc51eec-5069-468a-8b66-da00ca57b3a2)
-
-![image](https://github.com/user-attachments/assets/da641235-7871-4305-892c-350af5458392)
-
-
 Welcome to **InstaPy**, a feature-rich, Instagram-like web application built with **FastAPI** and **MongoDB**. InstaPy allows users to create accounts, share posts with images and captions, follow other users, like and comment on posts, and explore content through powerful search and filtering capabilities. Whether you're looking to connect with friends, share your experiences, or discover new content, InstaPy provides a seamless and engaging platform to do so.
 
 ## Table of Contents
@@ -83,9 +74,21 @@ Welcome to **InstaPy**, a feature-rich, Instagram-like web application built wit
 
 ## Demo
 
-![InstaPy Demo](static/images/demo.gif)
+![image](https://github.com/user-attachments/assets/eebcfa0e-eb46-44c0-a2be-2b5a02f94d0d)
 
-*Note: Replace the above image with actual screenshots or a demo GIF of your application.*
+![Screenshot 2024-12-28 175149](https://github.com/user-attachments/assets/d876aeb5-6414-4fff-ba8b-b5e68ca82855)
+
+![image](https://github.com/user-attachments/assets/adc51eec-5069-468a-8b66-da00ca57b3a2)
+
+![image](https://github.com/user-attachments/assets/da641235-7871-4305-892c-350af5458392)
+
+
+![image](https://github.com/user-attachments/assets/28b2a3d2-582d-4c8b-8063-52d1768d9a71)
+
+![image](https://github.com/user-attachments/assets/8101345d-5c6f-46a0-9484-88da80064602)
+
+![image](https://github.com/user-attachments/assets/4d7b1531-4a35-484d-bc51-4157911c46b0)
+
 
 ## Installation
 
